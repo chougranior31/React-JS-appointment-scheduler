@@ -1,0 +1,12 @@
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+.sidebar {
+    border: 1px solid red;
+    height: 400px;
+    width: 100px;
+}
+.agenda {
+    margin-left: 20px;
+}
