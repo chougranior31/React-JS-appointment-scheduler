@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../../../../modal";
 import styles from "./appointment.module.css";
 
 function Appointment({ appointment }) {

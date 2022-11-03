@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Agenda from "./Pages/Dashboard/Agenda/Agenda";
-import Dashboard from "./Pages/Dashboard/Dashboard";
+import Dashboard from "./Pages/Dashboard";
+import Agenda from "./Pages/Dashboard/Agenda";
 import Home from "./Pages/Home/Home";
 
 function App() {

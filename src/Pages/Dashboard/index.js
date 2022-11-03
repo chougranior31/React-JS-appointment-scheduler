@@ -1,19 +1,17 @@
 import React from "react";
-import { Fragment } from "react";
-import { Outlet } from "react-router-dom";
-import Agenda from "./Agenda/Agenda";
+import Agenda from "./Agenda";
 
-import style from "./Dashboard.module.css";
+import style from "./dashboard.module.css";
 
 export default function Dashboard() {
   return (
-    <Fragment>
+    <>
       <div className={style.dashboard}>
         <div className={style.sidebar}>sidebar</div>
         <div className={style.agenda}>
           <Agenda />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }
