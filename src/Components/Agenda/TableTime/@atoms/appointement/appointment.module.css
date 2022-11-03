@@ -1,16 +1,5 @@
-.container {
-  width: auto;
-  height: 83%;
-  max-height: 2000px;
-  background: white;
-  display: flex;
-  justify-content: start;
-  overflow: auto;
-}
-
 .appointment {
-  max-width: 102px;
-  max-height: 49%;
+  cursor: pointer;
   background-color: #ffe4e6;
   border-left: 3px solid #f43f5e;
   border-top-left-radius: 4px;
@@ -19,10 +8,16 @@
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  max-width: 102px;
+  max-height: 49%;
   height: 50%;
   width: 100%;
   font-size: 11px;
   padding-left: 4px;
   color: #be123c;
   font-weight: 500;
+}
+
+.borderBottom{
+  border-bottom: 1px dashed rgb(220, 220, 220);
 }

@@ -1,23 +1,36 @@
-import React from 'react'
-import { Fragment } from 'react'
+import React, { useState, useEffect } from "react";
+import { normalize, getWeek } from "./Utils";
+import styles from "./TableTime.module.css";
+import HoursBar from "./@atoms/hours-bar";
+import Day from "./@atoms/day";
 
+function TableTime({ appointments, slots, startDate }) {
+  // eslint-disable-next-line no-undef
+  const [week, onWeekChange] = useState([]);
 
-import Day from '../../Day/Day'
+  useEffect(() => {
+    onWeekChange(getWeek(normalize(appointments, slots), startDate));
+  }, [appointments, slots, startDate]);
 
-
-
-import style from './TableTime.module.css'
-
-export default function TableTime({ week }) {
+  const Header = (
+    <>
+      <p>EST</p>
+      <p>GMT-5</p>
+    </>
+  );
 
   return (
-    <Fragment>
-      <div className={style.days}>
-        {week.map((day ,i) => (
-          <Day
-          day={day} key={i} />
-        ))}
-      </div>
-    </Fragment>
-  )
+    <div className={styles.container}>
+      <HoursBar header={" "} side="left" />
+      {week.map((day, index) => (
+        <Day day={day} key={index} />
+      ))}
+      <HoursBar header={Header} side="right" />
+    </div>
+  );
+}
+
+export default TableTime;
+{
+  /* <Day day={day} key={index} /> */
 }

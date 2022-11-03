@@ -1,8 +1,10 @@
-.container {
+.agendaContainer {
     display: flex;
+    justify-content: space-between;
+    height: 95vh;;
 }
 .calendarContainer {
-    width: 240px;
+    margin-right: 30px;
 }
 
 
