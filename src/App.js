@@ -1,26 +1,23 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Agenda from './Pages/Dashboard/Agenda/Agenda';
-import Dashboard from './Pages/Dashboard/Dashboard';
-import Home from './Pages/Home/Home';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Dashboard from "./Pages/Dashboard";
+import Agenda from "./Pages/Dashboard/Agenda";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
-      <>
-        {/* <Layout> */}
-            <div className="App">
-                <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/dashboard" element={<Dashboard />}>
-                        <Route path="/dashboard/agenda" element={<Agenda />} />
-                      </Route>
-
-
-                </Routes>
-            </div>
-        {/* </Layout> */}
-      </>
-
+    <>
+      {/* <Layout> */}
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="/dashboard/agenda" element={<Agenda />} />
+          </Route>
+        </Routes>
+      </div>
+      {/* </Layout> */}
+    </>
   );
 }
 

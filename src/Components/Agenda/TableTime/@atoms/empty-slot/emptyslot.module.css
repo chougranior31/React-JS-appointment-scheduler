@@ -1,0 +1,15 @@
+.emptySlot {
+  cursor: pointer;
+  max-width: 108px;
+  max-height: 49%;
+  height: 50%;
+  width: 100%;
+}
+
+.emptySlot:hover {
+  background-color: rgba(246, 246, 246, 0.665);
+}
+
+.borderBottom{
+  border-bottom: 1px dashed rgb(220, 220, 220);
+}

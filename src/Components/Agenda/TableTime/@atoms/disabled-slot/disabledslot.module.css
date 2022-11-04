@@ -1,0 +1,15 @@
+.disabledSlot {
+  cursor: pointer;
+  background-color: #eff6ff;
+  max-width: 108px;
+  max-height: 49%;
+  height: 50%;
+  width: 100%;
+}
+.disabledSlot:hover {
+  background-color: #b0cef758;
+}
+
+.borderBottom{
+  border-bottom: 1px dashed rgb(220, 220, 220);
+}

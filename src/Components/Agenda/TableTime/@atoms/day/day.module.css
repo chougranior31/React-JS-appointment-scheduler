@@ -1,0 +1,110 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+}
+.slot {
+  width: 108px;
+  min-height: 100px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  border-right: 1px solid rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.day {
+  width: 108px;
+  min-height: 100px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  border-right: 1px solid rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  min-height: 56px;
+  justify-content: center;
+}
+.day > .name {
+  padding-left: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  color: #71717a;
+}
+
+.day > .number {
+  padding-left: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.hourLeft {
+  padding-right: 5px;
+  min-height: 101px;
+  border-bottom: transparent;
+  justify-content: start;
+  align-items: end;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #71717a;
+}
+
+.hourRight {
+  padding-left: 5px;
+  min-height: 101px;
+  border: transparent;
+  justify-content: start;
+  align-items: start;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #71717a;
+}
+.grow {
+  min-height: 56px;
+  border-bottom: none;
+}
+.appointmentSlot {
+  max-width: 102px;
+  max-height: 49%;
+  background-color: #ffe4e6;
+  border-left: 3px solid #f43f5e;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.appointmentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  height: 50%;
+  width: 100%;
+  font-size: 11px;
+  padding-left: 4px;
+  color: #be123c;
+  font-weight: 500;
+}
+
+.slot {
+  width: 108px;
+  min-height: 100px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  border-right: 1px solid rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
