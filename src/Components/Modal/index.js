@@ -15,7 +15,7 @@ export default function useModal() {
         <div ref={popover} className={style.modalContainer}>
           <img
             className={style.closeBtn}
-            alt="close"
+            alt="close "
             src={closeIcon}
             onClick={() => open(false)}
           />
