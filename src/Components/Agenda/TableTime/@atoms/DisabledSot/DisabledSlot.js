@@ -1,6 +1,6 @@
 import React from "react";
-import useModal from "../../../../modal";
-import styles from "./disabledslot.module.css";
+import useModal from "../../../../Modal/Modal";
+import styles from "./Disabledslot.module.css";
 
 function DisabledSlot({ slot }) {
   const { Modal, open } = useModal();

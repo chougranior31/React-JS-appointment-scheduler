@@ -1,6 +1,6 @@
 import React from "react";
 import { getHours } from "../../Utils";
-import styles from "./hoursbar.module.css";
+import styles from "./Hoursbar.module.css";
 
 function HoursBar({ header, side }) {
   const hours = getHours(["00"], "");

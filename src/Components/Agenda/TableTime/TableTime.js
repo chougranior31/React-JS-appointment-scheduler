@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { normalize, getWeek } from "./Utils";
 import styles from "./TableTime.module.css";
-import HoursBar from "./@atoms/hours-bar";
-import Day from "./@atoms/day";
+import HoursBar from "./@atoms/HoursBar/HoursBar";
+import Day from "./@atoms/Day/Day";
 
 function TableTime({ appointments, slots, startDate }) {
   // eslint-disable-next-line no-undef
