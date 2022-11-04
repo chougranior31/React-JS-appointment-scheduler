@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-import style from "./modal.module.css";
+import style from "./Modal.module.css";
 import closeIcon from "../../assets/icons/close.svg";
 import useOutSideClick from "../../utils/outside-click";
 

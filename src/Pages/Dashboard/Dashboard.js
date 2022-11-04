@@ -1,27 +1,15 @@
 import React from "react";
-import { useState } from "react";
-import TableTime from "../../../Components/agenda/TableTime";
-import style from "./agenda.module.css";
-import DatePicker from "../../../Components/agenda/calendar";
+import Agenda from "../../Components/Agenda/Agenda";
 
-export default function Agenda() {
-  const [startDate, onStartDateChange] = useState("");
+import style from "./Dashboard.module.css";
 
+export default function Dashboard() {
   return (
     <>
-      <div className={style.agendaContainer}>
-        <div className={style.calendarContainer}>
-          <DatePicker
-            currentDate={startDate}
-            onStartDateChange={onStartDateChange}
-          />
-        </div>
-        <div className={style.TabelTimeContainer}>
-          <TableTime
-            appointments={appointments}
-            slots={slots}
-            startDate={startDate}
-          />
+      <div className={style.dashboard}>
+        <div className={style.sidebar}>sidebar</div>
+        <div className={style.agenda}>
+          <Agenda appointments={appointments} slots={slots} />
         </div>
       </div>
     </>

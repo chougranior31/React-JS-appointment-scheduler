@@ -1,6 +1,6 @@
 import React from "react";
-import useModal from "../../../../modal";
-import styles from "./emptyslot.module.css";
+import useModal from "../../../../Modal/Modal";
+import styles from "./Emptyslot.module.css";
 
 function EmptySlot({ slot }) {
   const { Modal, open } = useModal();

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./day.module.css";
+import style from "./Day.module.css";
 
 function DayHeader({ day }) {
   return (

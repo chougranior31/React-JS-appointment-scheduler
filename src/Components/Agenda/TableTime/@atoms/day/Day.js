@@ -1,7 +1,7 @@
-import Appointment from "../appointement";
-import DisabledSlot from "../disabled-slot";
-import EmptySlot from "../empty-slot";
-import style from "./day.module.css";
+import Appointment from "../Appointement/Appointement";
+import DisabledSlot from "../DisabledSot/DisabledSlot";
+import EmptySlot from "../EmptySlot/EmptySlot";
+import style from "./Day.module.css";
 import DayHeader from "./DayHeader";
 
 export default function Day({ day, key }) {
