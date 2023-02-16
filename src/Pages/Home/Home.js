@@ -6,6 +6,9 @@ import { useEffect } from "react";
 import { getAppoitment } from "../../redux/features/Agenda/AgendaSlice";
 import { Fragment } from "react";
 
+
+
+
 export default function Home() {
 
 
@@ -13,20 +16,16 @@ export default function Home() {
   const { appoitment } = useSelector((state) => state.agenda)
 
 
-
-  useEffect(() => {
-    dispatch(getAppoitment())
-  },  [dispatch]);
-
-
+  // useEffect(() => {
+  //   dispatch(getAppoitment())
+  // },  [dispatch]);
 
 
 
 
 
   return (
-  
-    <Fragment>  
+    <Fragment>
       <div className="items">
         {appoitment && appoitment.map((el, i) => 
           <div key={i} className="item">
