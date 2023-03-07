@@ -5,8 +5,9 @@ import Agenda from "../../Components/Agenda/Agenda";
 import { useEffect } from "react";
 import { getAppoitment } from "../../redux/features/Agenda/AgendaSlice";
 import { Fragment } from "react";
+import Tables from "../Tables/Tables";
 
-
+import style from './Home.module.css'
 
 
 export default function Home() {
@@ -16,9 +17,9 @@ export default function Home() {
   const { appoitment } = useSelector((state) => state.agenda)
 
 
-  // useEffect(() => {
-  //   dispatch(getAppoitment())
-  // },  [dispatch]);
+  useEffect(() => {
+    dispatch(getAppoitment())
+  },  [dispatch]);
 
 
 
