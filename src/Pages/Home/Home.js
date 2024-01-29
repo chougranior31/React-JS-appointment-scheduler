@@ -1,41 +1,44 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Agenda from "../../Components/Agenda/Agenda";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-import { useEffect } from "react";
-import { getAppoitment } from "../../redux/features/Agenda/AgendaSlice";
-import { Fragment } from "react";
-import Tables from "../Tables/Tables";
+function Home() {
+    const [location, setLocation] = useState(null);
+    const [error, setError] = useState(null);
+    const userId = 1;  // Remplacez par l'ID utilisateur que vous souhaitez récupérer
 
-import style from './Home.module.css'
+    useEffect(() => {
+        const fetchLocation = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8000/location/${userId}`);
+                setLocation(response.data);
+            } catch (err) {
+                setError('Erreur lors de la récupération de la localisation.');
+            }
+        };
 
-
-export default function Home() {
-
-
-  const dispatch = useDispatch()
-  const { appoitment } = useSelector((state) => state.agenda)
-
-
-  useEffect(() => {
-    dispatch(getAppoitment())
-  },  [dispatch]);
+        fetchLocation();
+    }, [userId]);
 
 
+    console.log(location);
 
-
-
-  return (
-    <Fragment>
-      <div className="items">
-        {appoitment && appoitment.map((el, i) => 
-          <div key={i} className="item">
-            <p>{el.name}</p>
-          </div>
-        )}
-      </div>
-    </Fragment>
-  
-  
-);
+    return (
+        <div>
+            <h1>user location </h1>
+            <div>
+                <h2>location : </h2>
+                {error && <p>{error}</p>}
+                {location ? (
+                    <div>
+                        <p>Latitude: {location.latitude}</p>
+                        <p>Longitude: {location.longitude}</p>
+                    </div>
+                ) : (
+                    <p>Chargement de la localisation...</p>
+                )}
+            </div>
+        </div>
+    );
 }
+
+export default Home;
